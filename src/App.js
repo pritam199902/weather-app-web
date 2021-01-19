@@ -117,7 +117,7 @@ function App() {
     fetch(API_URI)
       .then((response) => response.json())
       .then((data) => {
-        console.log("res data ", data);
+        // console.log("res data ", data);
         if (data.cod === 200) {
           setData(data);
           setIsShowEdit(true);
