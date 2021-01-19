@@ -1,8 +1,8 @@
 import "./App.css";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import ReactLoading from "react-loading";
 
-import { bounce, fadeInDown, fadeInUp, fadeOutUp } from "react-animations";
+import {  fadeInDown } from "react-animations";
 import { StyleSheet, css } from "aphrodite";
 
 ////////////////////////////////////////////////////////////////
@@ -23,32 +23,32 @@ function App() {
   const API_KEY = "ff05f8c09dfd8d8f97450980f607a648";
   const API_URI = `https://api.openweathermap.org/data/2.5/weather?q=${q}&appid=${API_KEY}`;
   ///////////////////
-  const testData = {
-    coord: { lon: 88.2667, lat: 24.1833 },
-    weather: [
-      { id: 800, main: "Clear", description: "clear sky", icon: "01d" },
-    ],
-    base: "stations",
-    main: {
-      temp: 300.96,
-      feels_like: 297.68,
-      temp_min: 300.96,
-      temp_max: 300.96,
-      pressure: 1011,
-      humidity: 27,
-      sea_level: 1011,
-      grnd_level: 1008,
-    },
-    visibility: 10000,
-    wind: { speed: 3.72, deg: 287 },
-    clouds: { all: 2 },
-    dt: 1610443627,
-    sys: { country: "IN", sunrise: 1610412724, sunset: 1610451472 },
-    timezone: 19800,
-    id: 1262412,
-    name: "Murshidābād",
-    cod: 200,
-  };
+  // const testData = {
+  //   coord: { lon: 88.2667, lat: 24.1833 },
+  //   weather: [
+  //     { id: 800, main: "Clear", description: "clear sky", icon: "01d" },
+  //   ],
+  //   base: "stations",
+  //   main: {
+  //     temp: 300.96,
+  //     feels_like: 297.68,
+  //     temp_min: 300.96,
+  //     temp_max: 300.96,
+  //     pressure: 1011,
+  //     humidity: 27,
+  //     sea_level: 1011,
+  //     grnd_level: 1008,
+  //   },
+  //   visibility: 10000,
+  //   wind: { speed: 3.72, deg: 287 },
+  //   clouds: { all: 2 },
+  //   dt: 1610443627,
+  //   sys: { country: "IN", sunrise: 1610412724, sunset: 1610451472 },
+  //   timezone: 19800,
+  //   id: 1262412,
+  //   name: "Murshidābād",
+  //   cod: 200,
+  // };
 
   // functions
   const realTime = (epc) => {
@@ -80,10 +80,10 @@ function App() {
     return atm.toFixed(1);
   };
 
-  const Refresh = () => {
-    setData(null);
-    CALL_API();
-  };
+  // const Refresh = () => {
+  //   setData(null);
+  //   CALL_API();
+  // };
 
   const setIcon = () => {
     const iconCode = data && data.weather[0].icon;
