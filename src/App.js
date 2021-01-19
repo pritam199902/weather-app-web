@@ -139,6 +139,18 @@ function App() {
   };
 
   // COMPONENTS
+
+  const navbar = () => {
+    return (
+      <nav className="navbar navbar-expand-lg navbar-light bg-light">
+        <h3 className="text-center m-auto">
+         <img style={{height: 50 , paddingRight : 20}} src="https://purepng.com/public/uploads/large/purepng.com-weather-iconsymbolsiconsapple-iosiosios-8-iconsios-8-721522596142qx4ep.png" />
+          WEATHER APP
+        </h3>
+      </nav>
+    );
+  };
+
   const NoDataFound = () => {
     return (
       <div className={("row", css(styles.bounce))} style={{ marginTop: 35 }}>
@@ -259,25 +271,42 @@ function App() {
                       className="btn-group btn-group-toggle"
                       data-toggle="buttons"
                     >
-                      <label  className={unit ==="C" ?"btn btn-outline-primary active" : "btn btn-outline-primar"} onClick={()=>{setUnit("C")}}>
+                      <label
+                        className={
+                          unit === "C"
+                            ? "btn btn-outline-primary active"
+                            : "btn btn-outline-primar"
+                        }
+                        onClick={() => {
+                          setUnit("C");
+                        }}
+                      >
                         <input
                           type="radio"
                           name="options"
                           id="option1"
                           autoComplete="off"
-                        />&deg;C
+                        />
+                        &deg;C
                       </label>
-                      <label className={unit ==="F" ?"btn btn-outline-primary active" : "btn btn-outline-primar"} onClick={()=>{setUnit("F")}}>
+                      <label
+                        className={
+                          unit === "F"
+                            ? "btn btn-outline-primary active"
+                            : "btn btn-outline-primar"
+                        }
+                        onClick={() => {
+                          setUnit("F");
+                        }}
+                      >
                         <input
                           type="radio"
                           name="options"
                           id="option2"
                           autoComplete="off"
-                          
                         />
                         &deg;F
                       </label>
-                      
                     </div>
                     {/*  */}
                   </div>
@@ -394,6 +423,7 @@ function App() {
   /////////////////////////////////////////////////////////////////
   return (
     <div className="">
+      {navbar()}
       {isShowEdit && searchCity()}
       {isLoading && Loading()}
       {isError && NoDataFound()}
