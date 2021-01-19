@@ -142,8 +142,8 @@ function App() {
 
   const navbar = () => {
     return (
-      <nav className="navbar navbar-expand-lg navbar-light bg-light">
-        <h3 className="text-center m-auto">
+      <nav className="navbar navbar-expand-lg navbar-light bg-light" style={{backgroundColor: "#fff"}}>
+        <h3 className="text-center m-auto" style={{fontWeight: "800"}}>
          <img style={{height: 50 , paddingRight : 20}} src="https://purepng.com/public/uploads/large/purepng.com-weather-iconsymbolsiconsapple-iosiosios-8-iconsios-8-721522596142qx4ep.png" />
           WEATHER APP
         </h3>
